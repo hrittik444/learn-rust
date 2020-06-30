@@ -13,6 +13,14 @@ mod ds;
 mod pm;
 #[path = "st/st.rs"]
 mod st;
+#[path = "strg/strg.rs"]
+mod strg;
+#[path = "ng/ng.rs"]
+mod ng;
+#[path = "fnc/fnc.rs"]
+mod fnc;
+#[path = "tr/tr.rs"]
+mod tr;
 
 // GLOBAL VARIABLES:
 // can be declared using const or statis
@@ -111,19 +119,39 @@ fn main() {
     // CONTROL FLOW:
     cf::if_statememt();
 
-    // COMBINATION LOCK EXAMPLE:
+    // COMBINATION LOCK GAME:
     /* cl::combination_lock(); */
 
     // DATA STRUCTURES:
     ds::data_str();
 
-    // PATTERN MATCHING and GENERICS
+    // PATTERN MATCHING and GENERICS:
     pm::pattern_matching();
     pm::generics();
 
-    // STARNDARD COLLECTIONS
+    // STARNDARD COLLECTIONS:
     st::standard_collection();
 
+    // STRINGS:
+    strg::strings();
+
+    // NUMBERS GUESSING GAME:
+    /* ng::numbers_game(); */
+
+    // FUNCTIONS:
+    fnc::functions();
+
+    // MEHODS:
+    fnc::methods();
+
+    // CLOSURES:
+    fnc::closures();
+
+    // HIGHER ORDER FUNCTIONS:
+    fnc::hocs();
+
+    // TRAITS:
+    tr::traits();
 }
 
 fn scope_and_shadowing() {

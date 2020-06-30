@@ -135,6 +135,26 @@ fn hash_sets() {
 
     if is_removed { println!("removed beta"); }
     println!("{:?}", greek);
+
+    // _1_5 are just variable names
+    // <_> meas that teh type will be inferred automatically
+    // ..= means inclusive range
+    let _1_5: HashSet<_> = (1..=5).collect();
+    let _6_10: HashSet<_> = (6..=10).collect();
+    let _1_10: HashSet<_> = (1..=10).collect();
+    let _2_8: HashSet<_> = (2..=8).collect();
+
+    // subset
+    println!("is {:?} a subset of {:?} = {}", _2_8, _1_10, _2_8.is_subset(&_1_10));
+
+    // disjoint sets - no common elements
+    println!("is {:?} a subset of {:?} = {}", _1_5, _6_10, _1_5.is_disjoint(&_6_10));
+
+    // union and intersection
+    println!("union of {:?} and {:?} = {:?}", _2_8, _6_10, _2_8.union(&_6_10));
+
+    // difference and symmetric difference
+    // ...
 }
 
 pub fn standard_collection() {
